@@ -22,6 +22,11 @@ interface Props {
    */
   hideIcon?: boolean
   /**
+   * Screen-reader text announced for external links.
+   * @default 'Opens in a new tab'
+   */
+  externalLabel?: string
+  /**
    * Style the link as a button
    */
   isButton?: boolean
@@ -82,6 +87,7 @@ const {
   href,
   isExternal = false,
   hideIcon = false,
+  externalLabel = 'Opens in a new tab',
   isButton = false,
   variant = 'filled',
   type = 'default',
@@ -170,7 +176,7 @@ const buttonClasses = isButton
               <path d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
             </svg>
           </slot>
-          <span class="sr-only">Opens in a new tab</span>
+          <span class="sr-only">{externalLabel}</span>
         </>
       </>
     )
