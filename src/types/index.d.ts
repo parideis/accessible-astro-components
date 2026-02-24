@@ -138,12 +138,13 @@ export const Heading: Heading
  * @param _props.ariaLabel - The aria-label attribute
  * @param _props.title - The title attribute
  * @param _props.rel - Additional rel tokens to merge with security defaults (external links always include "noopener noreferrer")
+ * @param _props.externalLabel - Screen-reader text announced for external links - default: 'Opens in a new tab'
  * @param _props.animateOnHover - Whether to animate the icon on hover (only when isButton is true) - default: false
  * @param _props.animationType - Type of animation to apply on hover when isButton is true ('rotate' | 'boop' | 'bouncing' | 'nudge' | 'none') - default: 'boop'
  * @param _props.animationIntensity - Animation intensity (1-10) - default: 5
  * @param _props.pulse - Whether to apply a pulsating animation to draw attention (pulses 3 times) - default: false
  * @param _props.children - Text content or any legal anchor innerHTML. Parent element: `<a>`
- * @note External links automatically display an icon and screen reader text "Opens in a new tab"
+ * @note External links automatically display an icon and screen reader text (default: "Opens in a new tab", customizable via externalLabel)
  * @note Supports custom external link icons via the "icon" named slot
  * @note Additional HTML attributes can be passed and will be spread to the root element
  */
